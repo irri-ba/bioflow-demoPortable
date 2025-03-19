@@ -1239,7 +1239,7 @@ if (is.null(result)){
         
       }
       vv <- cgiarBase::matToTab(corr)
-      p <- ggplot2::ggplot(data = vv[which(vv$Var1 != vv$Var2),], ggplot2::aes(Var2, Var1, fill = Freq))+
+      p <- ggplot2::ggplot(data = vv, ggplot2::aes(Var2, Var1, fill = Freq))+
         ggplot2::geom_tile(color = "white") +
         ggplot2::scale_fill_gradient2(low = "#E46726", high = "#038542", mid = "white", 
                                       midpoint = 0, limit = c(-1,1), space = "Lab", 
